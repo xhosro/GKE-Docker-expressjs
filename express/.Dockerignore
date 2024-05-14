@@ -1,1 +1,9 @@
 node_modules
+
+
+docker tag \
+    us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0 \
+    eu-west1-docker.pkg.dev/terraform-422613/expressapp111/nodejsapp:v1.0
+
+
+europe-west1-docker.pkg.dev/terraform-422613/expressapp111

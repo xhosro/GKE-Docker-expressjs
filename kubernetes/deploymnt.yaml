@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeappexpress
+  labels:
+    type: backend
+    app: nodeapp
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      type: backend
+      app: nodeapp
+  template:
+    metadata:
+      name: nodeapppod
+      labels:
+        type: backend
+        app: nodeapp
+    spec:
+      containers:
+        - name: nodejsapp
+          image:  eu-west1-docker.pkg.dev/terraform-422613/expressapp111/nodejsapp:v1.0
+          ports:
+            - containerPort: 80
